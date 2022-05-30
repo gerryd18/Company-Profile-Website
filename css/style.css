@@ -99,7 +99,7 @@ header ul li a:hover {
 
 /* banner text animation */
 .banner:hover h2 {
-  animation: fadeAndRotate 0.3s forwards;
+  /* animation:  0.3s forwards; */
 }
 
 .banner::after {
