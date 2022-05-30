@@ -1,0 +1,295 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+body {
+  background-color: #e8f0f2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ========================================= Header ========================================= */
+.medsos {
+  padding: 5px 0;
+  background-color: #053742;
+}
+
+.medsos ul li {
+  display: inline-block;
+  color: #e8f0f2;
+  margin-right: 10px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.container:after {
+  /*clear*/
+  content: '';
+  display: block;
+  clear: both;
+}
+
+header h1 {
+  float: left;
+  padding: 15px 0;
+  color: #053742;
+  margin-left: -50px;
+}
+
+header ul {
+  float: right;
+}
+
+header ul li,
+header ul li a {
+  display: inline-block;
+}
+
+header ul li a {
+  padding: 25px 20px;
+  transition: 0.3s;
+}
+
+header ul li a:hover {
+  background-color: #053742;
+  color: #e8f0f2;
+}
+
+/* active class */
+.active {
+  background-color: #053742;
+  color: #e8f0f2;
+}
+
+/* ========================================= Banner ========================================= */
+.banner {
+  height: 60vh;
+  background-image: url("../img/banner.jpg");
+  background-position: 0 -160px;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  /* posisi text dan border ditengah */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* posisi text ditengah tapi border meluas */
+  /* text-align: center;
+  line-height: 60vh; */
+}
+
+.banner h2 {
+  position: relative;
+  z-index: 2;
+  color: #e8f0f2;
+  padding: 20px;
+  border: 5px solid #e8f0f2;
+  transition: all 0.3s;
+  transform: scale(0);
+}
+
+/* banner text animation */
+.banner:hover h2 {
+  animation: fadeAndRotate 0.3s forwards;
+}
+
+.banner::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(36, 84, 95, 0.5);
+}
+
+section {
+  padding: 50px 0;
+  transition: background-color 0.3s;
+}
+
+/* ========================================= about ========================================= */
+
+section h3 {
+  text-align: center;
+  padding: 10px 0;
+  color: #053742;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+section:hover {
+  background-color: rgba(36, 84, 95, 1);
+}
+
+section:hover p,
+section:hover .box {
+  color: #b0b2b3;
+}
+
+section:hover h3,
+section:hover h4 {
+  color: #e8f0f2;
+}
+section:hover img {
+  filter: hue-rotate(90deg);
+}
+
+.about {
+  padding-bottom: 150px;
+}
+
+.about p {
+  color: #666;
+  word-spacing: 2px;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about img {
+  margin-left: 26%;
+  width: 50%;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px rgba(232, 240, 242, 0.3);
+}
+
+/* ========================================= services ========================================= */
+.service {
+  padding-bottom: 150px;
+}
+
+.box {
+  color: #053742;
+}
+
+.box::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.box .col-4 {
+  width: 25%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  float: left;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border: 1px solid;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 25px;
+  margin: 0 auto;
+}
+
+.box .col-4 h4 {
+  margin: 15px 0;
+}
+
+/* ========================================= footer ========================================= */
+footer {
+  padding: 30px 0;
+  background-color: #053742;
+  color: #e8f0f2;
+  text-align: center;
+}
+
+/* ========================================= loader ========================================= */
+.bg-loader {
+  background-color: #e8f0f2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-loader .loader {
+  width: 100px;
+  height: 100px;
+  border: 3px solid white;
+  border-top-color: #053742;
+  border-right-color: #053742;
+  border-bottom-color: #053742;
+  border-radius: 50%;
+  animation: rotate 0.8s infinite linear;
+}
+
+/* ========================================= label ========================================= */
+.label {
+  margin-top: -2px;
+  background-color: #053742;
+  color: #e8f0f2;
+}
+
+/* ========================================= contact ========================================= */
+
+.contact iframe {
+  margin: 50px 0;
+  border-radius: 50px;
+}
+/* ========================================= animation ========================================= */
+@keyframes fade {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeAndRotate {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  header h1 {
+    text-align: center;
+    float: none;
+  }
+  header ul {
+    text-align: center;
+    float: none;
+  }
+  .box .col-4 {
+    width: 100%;
+    float: none;
+    margin-bottom: 20px;
+  }
+}
